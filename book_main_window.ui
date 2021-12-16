@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>868</width>
+    <height>525</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="bgwidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>0</y>
+      <width>881</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#bgwidget{
+background-color: qlineargradient(spread:pad, x1:0.051, y1:0.0849545, x2:0.853, y2:0.726818, stop:0 rgba(92, 47, 154, 255), stop:1 rgba(255, 171, 176, 255));}</string>
+    </property>
+    <widget class="QPushButton" name="find_button">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>180</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>OpenHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+}
+
+QPushButton:hover{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+	border-color:rgb(51, 143, 255);
+	color: rgb(51, 143, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>FIND</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="borrow_button">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>170</y>
+       <width>121</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>OpenHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+}
+
+QPushButton:hover{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+	border-color:rgb(51, 143, 255);
+	color: rgb(51, 143, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>BORROW</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="update_button">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>140</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>OpenHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+}
+
+QPushButton:hover{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+	border-color:rgb(51, 143, 255);
+	color: rgb(51, 143, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>UPDATE</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="books_tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>100</y>
+       <width>571</width>
+       <height>401</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    background-color: rgb(186, 186, 186);
+    color: black;
+	border: 1px solid black;
+}
+
+QHeaderView::section {
+    background-color: rgb(186, 186, 186);
+    padding: 4px;
+    border: 1px solid black;
+	font: 63 9pt &quot;Lucida Fax&quot;;
+}
+
+QTableWidget {
+    gridline-color: black;
+	font: 63 8pt &quot;Lucida Fax&quot;;
+	background-color:white;
+	alternate-background-color:rgb(156, 156, 156);
+	selection-background-color:rgb(156, 156, 156);
+	 border: 1px solid black;
+}
+QTableWidget QTableCornerButton::section {
+    background-color: rgb(186, 186, 186);
+    border: 1px solid black;
+
+}
+</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>TITLE</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>NAME</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>SURNAME</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>TYPE</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="library_label">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>40</y>
+       <width>311</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>LIBRARY DATABASE</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="delete_button">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>470</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>OpenHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+}
+
+QPushButton:hover{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+	border-color:rgb(51, 143, 255);
+	color: rgb(51, 143, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>DELETE</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="books_button">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>110</y>
+       <width>121</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>OpenHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+}
+
+QPushButton:hover{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+	border-color:rgb(51, 143, 255);
+	color: rgb(51, 143, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>BOOKS</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="try_me_button">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>230</y>
+       <width>121</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>OpenHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+}
+
+QPushButton:hover{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+	border-color:rgb(51, 143, 255);
+	color: rgb(51, 143, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>TRY ME</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="new_button">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>100</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>OpenHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+}
+
+QPushButton:hover{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+	border-color:rgb(51, 143, 255);
+	color: rgb(51, 143, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>NEW</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="background_label">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-10</y>
+       <width>891</width>
+       <height>701</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../bds_project_3/Source_imgs/bckgrnd.jpg</pixmap>
+     </property>
+    </widget>
+    <zorder>background_label</zorder>
+    <zorder>find_button</zorder>
+    <zorder>borrow_button</zorder>
+    <zorder>update_button</zorder>
+    <zorder>books_tableWidget</zorder>
+    <zorder>library_label</zorder>
+    <zorder>delete_button</zorder>
+    <zorder>books_button</zorder>
+    <zorder>try_me_button</zorder>
+    <zorder>new_button</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

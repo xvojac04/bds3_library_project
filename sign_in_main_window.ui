@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>310</width>
+    <height>189</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="bgwidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>311</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>311</width>
+      <height>191</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>311</width>
+      <height>191</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#bgwidget{
+background-color: qlineargradient(spread:pad, x1:0.051, y1:0.0849545, x2:0.853, y2:0.726818, stop:0 rgba(92, 47, 154, 255), stop:1 rgba(255, 171, 176, 255));}</string>
+    </property>
+    <widget class="QLineEdit" name="password_input">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>90</y>
+       <width>148</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+	background-color: white;
+	border-style: outset;
+	border-width: 1px;
+	border-radius: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+QLineEdit:hover{
+	border-width: 2px;
+	border-color:rgb(51, 143, 255);
+}
+
+QLineEdit:focus{
+	border-width: 2px;
+	border-color:rgb(51, 143, 255);
+}</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>password</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="username_label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>50</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>USERNAME</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="enter_button">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>130</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>OpenHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+}
+
+QPushButton:hover{
+	border-style:outset;
+	border-width:2px;
+	border-radius:10px;
+	border-color:black;
+	border-color:rgb(51, 143, 255);
+	color: rgb(51, 143, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>ENTER DATABASE</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="password_label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>90</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>PASSWORD</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="username_input">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>50</y>
+       <width>151</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Fax</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+	background-color: white;
+	border-style: outset;
+	border-width: 1px;
+	border-radius: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+QLineEdit:hover{
+	border-width: 2px;
+	border-color:rgb(51, 143, 255);
+}
+
+QLineEdit:focus{
+	border-width: 2px;
+	border-color:rgb(51, 143, 255);
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>username</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>-160</x>
+       <y>-100</y>
+       <width>501</width>
+       <height>361</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>501</width>
+       <height>361</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>501</width>
+       <height>361</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>Source_imgs/bckgrnd_01.jpg</pixmap>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>password_input</zorder>
+    <zorder>username_label</zorder>
+    <zorder>enter_button</zorder>
+    <zorder>password_label</zorder>
+    <zorder>username_input</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,54 @@
+PyQt5
+Name: PyQt5
+Version: 5.15.4
+Summary: Python bindings for the Qt cross platform application toolkit
+Home-page: https://www.riverbankcomputing.com/software/pyqt/
+Author: Riverbank Computing Limited
+Author-email: info@riverbankcomputing.com
+License: GPL v3
+Requires: PyQt5-Qt5, PyQt5-sip
+Required-by: pyqt5-tools, pyqt5-plugins
+
+qt5-tools
+Name: qt5-tools
+Version: 5.15.2.1.2
+Summary: Wrappers for the raw Qt programs from qt5-applications
+Home-page: https://github.com/altendky/qt-tools
+Author: Kyle Altendorf
+Author-email: sda@fstab.net
+License: LGPLv3
+Requires: qt5-applications, click
+Required-by: pyqt5-plugins
+
+passlib
+Name: passlib
+Version: 1.7.4
+Summary: comprehensive password hashing framework supporting over 30 schemes
+Home-page: https://passlib.readthedocs.io
+Author: Eli Collins
+Author-email: elic@assurancetechnologies.com
+License: BSD
+Requires:
+Required-by:
+
+psycopg2
+Name: psycopg2
+Version: 2.9.2
+Summary: psycopg2 - Python-PostgreSQL Database Adapter
+Home-page: https://psycopg.org/
+Author: Federico Di Gregorio
+Author-email: fog@initd.org
+License: LGPL with exceptions
+Requires:
+Required-by:
+
+argon2-cffi
+Name: argon2-cffi
+Version: 21.3.0
+Summary: The secure Argon2 password hashing algorithm.
+Home-page:
+Author:
+Author-email: Hynek Schlawack <hs@ox.cx>
+License:
+Requires: argon2-cffi-bindings
+Required-by:
