@@ -27,7 +27,7 @@ class NewTryMe(QtWidgets.QMainWindow):
 
     def enterButtonPressed(self):
         print("Button is pressed")
-        logger_3.warning(f"New insert: {self.name_input.text(), self.surname_input.text(), self.age_input.text(), self.city_input.text()}")
+        logger_3.warning(f"New insert tryme: {self.name_input.text(), self.surname_input.text(), self.age_input.text(), self.city_input.text()}")
         f.injectionSQL(self.name_input.text(), self.surname_input.text(), self.age_input.text(), self.city_input.text())
         self.close()
 

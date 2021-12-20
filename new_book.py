@@ -28,7 +28,7 @@ class NewBook(QtWidgets.QMainWindow):
     def enterButtonPressed(self):
         #print("Button is pressed")
         #logger2.warning(f"New insert: {self.title_input.text(), self.name_input.text(), self.surname_input.text()}")
-        logger_2.warning(f"New insert: {self.title_input.text(), self.name_input.text(), self.surname_input.text()}")
+        logger_2.warning(f"New insert book: {self.title_input.text(), self.name_input.text(), self.surname_input.text()}")
         f.insertNewBook(self.title_input.text(), self.name_input.text(), self.surname_input.text())
         self.close()
 
