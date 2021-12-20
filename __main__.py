@@ -3,11 +3,13 @@ from PyQt5 import QtWidgets,uic
 from PyQt5.QtWidgets import QMessageBox
 import functions as f
 from database_view import ViewTable
+from logger import setup_logger
 import logging
 
-logging.basicConfig(filename="library.log")
-logger = logging.getLogger(__name__)
-
+#logging.basicConfig(filename="library.log")
+#logger1 = logging.getLogger(__name__)
+setup_logger('log1', "líbrary.log")
+logger_1 = logging.getLogger('log1')
 
 class SignIn(QtWidgets.QMainWindow):
     def __init__(self):
@@ -39,7 +41,8 @@ class SignIn(QtWidgets.QMainWindow):
 
         else:
             print("Wrong")
-            logger.warning(f"User {self.username_input.text()} tried to log in with wrong password!")
+            #logger1.warning(f"User {self.username_input.text()} tried to log in with wrong password!")
+            logger_1.warning(f"User {self.username_input.text()} tried to log in with wrong password!")
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Critical)
             msg.setText("Wrong username or password")
@@ -50,4 +53,6 @@ class SignIn(QtWidgets.QMainWindow):
 
 app = QtWidgets.QApplication(sys.argv)
 window = SignIn()
+window.setFixedWidth(300)
+window.setFixedHeight(180)
 app.exec_()

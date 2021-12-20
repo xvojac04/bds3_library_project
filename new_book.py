@@ -2,11 +2,12 @@ import sys
 from PyQt5 import QtWidgets,uic
 from PyQt5.QtWidgets import QMessageBox
 import functions as f
-
+from logger import setup_logger
 import logging
 
-logging.basicConfig(filename="input.log")
-logger = logging.getLogger(__name__)
+setup_logger('log2', "input.log")
+logger_2 = logging.getLogger('log2')
+
 
 class NewBook(QtWidgets.QMainWindow):
     def __init__(self):
@@ -26,7 +27,8 @@ class NewBook(QtWidgets.QMainWindow):
 
     def enterButtonPressed(self):
         #print("Button is pressed")
-        logger.log(f"New insert: {self.title_input.text(), self.name_input.text(), self.surname_input.text()}")
+        #logger2.warning(f"New insert: {self.title_input.text(), self.name_input.text(), self.surname_input.text()}")
+        logger_2.warning(f"New insert: {self.title_input.text(), self.name_input.text(), self.surname_input.text()}")
         f.insertNewBook(self.title_input.text(), self.name_input.text(), self.surname_input.text())
         self.close()
 

@@ -67,10 +67,10 @@ def getBookRows():
         print(connection.get_dsn_parameters(), "\n")
         """
         # Executing a SQL query
-        postgreSQL_select_Query = "SELECT b.title, w.first_name, w.surname, t.type FROM public.book b JOIN " \
-                                  "public.bookwriter bw ON b.book_id =bw.book_id JOIN public.writer w ON " \
-                                  "bw.writer_id = w.writer_id JOIN public.booktype bt ON b.book_id = bt.book_id JOIN " \
-                                  "public.type t ON bt.type_id = t.type_id "
+        postgreSQL_select_Query = "SELECT b.title, w.first_name, w.surname, t.type FROM public.book b FULL OUTER JOIN " \
+                                  "public.bookwriter bw ON b.book_id =bw.book_id FULL OUTER JOIN public.writer w ON " \
+                                  "bw.writer_id = w.writer_id FULL OUTER JOIN public.booktype bt ON b.book_id = bt.book_id FULL OUTER JOIN " \
+                                  "public.type t ON bt.type_id = t.type_id WHERE title IS NOT NULL"
         cursor.execute(postgreSQL_select_Query)
 
         # Fetch result
